@@ -186,7 +186,7 @@ public class ESFrmMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
-        String clicked = lstWorkouts.getSelectedValue();
+      String clicked = lstWorkouts.getSelectedValue();
         String workoutID = manager.selectItem("Workout", "workoutID", "workoutName", clicked);
         String sMins = manager.selectItem("Sets", "setTimeMins", "workoutID", workoutID);
         String sSecs = manager.selectItem("Sets", "setTimeSecs", "workoutID", workoutID);
@@ -226,7 +226,7 @@ public class ESFrmMain extends javax.swing.JFrame {
                // + strokeType + " on " + String.valueOf(sMins) + ":" + String.valueOf(sSecs));
        // System.out.println("Description: " + setDescription);
 
-         ESGuiRunWorkout dlg = new ESGuiRunWorkout(this, clicked, true);
+         ESWorkoutTimer dlg = new ESWorkoutTimer(this, true, clicked);
          dlg.setVisible(true);        
     }//GEN-LAST:event_btnStartActionPerformed
 
